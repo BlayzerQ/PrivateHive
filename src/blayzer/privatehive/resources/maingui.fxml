@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blayzer.privatehive.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane id="chatPane" fx:id="chatPane" layoutY="30.0" prefHeight="370.0" prefWidth="640.0" visible="false">
+               <children>
+                  <TextArea id="mainChatArea" fx:id="mainChatArea" editable="false" layoutX="14.0" layoutY="7.0" prefHeight="209.0" prefWidth="613.0" scrollTop="10.0" wrapText="true" />
+                  <TextField id="messageField" fx:id="messageField" alignment="TOP_LEFT" layoutX="14.0" layoutY="222.0" onAction="#sendMessageButton" prefHeight="105.0" prefWidth="613.0" promptText="Введите сообщение..." />
+                  <Button id="sendButton" fx:id="sendButton" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#sendMessageButton" prefHeight="25.0" prefWidth="507.0" text="Отправить" />
+                  <Button id="fileButton" layoutX="525.0" layoutY="335.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Выбрать файл" />
+               </children>
+            </Pane>
+            <Pane id="chatPane" fx:id="loginPane" prefHeight="370.0" prefWidth="641.0">
+               <children>
+                  <Button alignment="CENTER" layoutX="216.0" layoutY="206.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="25.0" prefWidth="210.0" text="Войти" />
+                  <TextField fx:id="nameField" alignment="CENTER" layoutX="216.0" layoutY="140.0" prefHeight="25.0" prefWidth="210.0" promptText="Ник" />
+                  <TextField fx:id="keyField" alignment="CENTER" layoutX="216.0" layoutY="172.0" prefHeight="25.0" prefWidth="210.0" promptText="Секретный ключ" />
+                  <Label fx:id="loginLabel" alignment="CENTER" layoutX="217.0" layoutY="242.0" prefHeight="17.0" prefWidth="210.0" textFill="#d75050">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="topPane" onMouseDragged="#moveWindowMouseDragged" onMousePressed="#moveWindowMousePressed" prefHeight="29.0" prefWidth="640.0">
+               <children>
+                  <Button id="close" fx:id="exitButton" ellipsisString="" layoutX="616.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="22.0" stylesheets="@css.css" />
+                  <Button id="max" fx:id="maxButton" disable="true" ellipsisString="" layoutX="592.0" layoutY="1.0" mnemonicParsing="false" onAction="#maxButton" prefHeight="25.0" prefWidth="22.0" stylesheets="@css.css" />
+                  <Button id="min" fx:id="minButton" ellipsisString="" layoutX="568.0" layoutY="1.0" mnemonicParsing="false" onAction="#minButton" prefHeight="25.0" prefWidth="22.0" stylesheets="@css.css" />
+                  <Label layoutX="9.0" layoutY="5.0" text="PrivateHive" />
+               </children>
+            </Pane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

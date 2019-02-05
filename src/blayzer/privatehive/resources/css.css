@@ -1,0 +1,26 @@
+#close {
+    -fx-border-color: darkgray;
+    -fx-background-color: lightgrey;
+    -fx-background-image: url("close.png");
+    -fx-background-size: 16 16;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#max {
+    -fx-border-color: darkgray;
+    -fx-background-color: lightgrey;
+    -fx-background-image: url("max.png");
+    -fx-background-size: 16 16;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#min {
+    -fx-border-color: darkgray;
+    -fx-background-color: lightgrey;
+    -fx-background-image: url("min.png");
+    -fx-background-size: 16 16;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
